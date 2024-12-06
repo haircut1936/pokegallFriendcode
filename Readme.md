@@ -16,7 +16,7 @@
 
 3. **설정 파일로 동작 제어**
    - `설정.txt` 파일에서 사이트 주소 및 동작 설정을 수정할 수 있습니다.
-   - `설정.txt` 파일은 프로그램 실행 시 자동 생성됩니다.
+   - 이 파일은 프로그램 실행 시 자동 생성됩니다.
 
 ---
 
@@ -29,8 +29,14 @@ git clone https://github.com/haircut1936/pokegallFriendcode.git
 ```
 
 ### 2. 추가 의존성 다운로드
-이 프로그램은 ChromeDriver를 필요로 합니다. 아래 링크에서 ChromeDriver를 다운로드하고, 프로젝트 폴더에 추가하세요:
+이 프로그램은 ChromeDriver를 필요로 합니다. 아래 링크에서 Chrome과 ChromeDriver를 다운로드하고, 프로젝트 폴더에 추가하세요:
 - [Chrome for Testing](https://googlechromelabs.github.io/chrome-for-testing/)
+
+### 3. 빌드
+python과 필요한 라이브러리를 모두 설치하고, run.py를 컴파일하면 됩니다.
+
+미리 빌드된 프로젝트의 경우, [구글 드라이브](https://drive.google.com/file/d/1TvjqsX7ZaqoleG27uA48dsD75GcwE34p/view)에 준비되어 있습니다.  
+위 링크에는 Chrome과 ChromeDriver가 모두 포함되어 있으니, 추가로 더 다운로드가 필요한 파일은 없습니다.
 
 ---
 
@@ -48,6 +54,7 @@ git clone https://github.com/haircut1936/pokegallFriendcode.git
 
 ### 2. **블랙리스트 설정**
 `블랙리스트.txt` 파일에 식별 코드를 추가하면 해당 사용자는 글댓합 확인에서 제외됩니다.  
+프로그램 실행 중에는 수정하여도 반영되지 않으니 주의하세요.  
 아래와 같은 형식으로 작성하세요:
 ```
 bunny123
@@ -69,7 +76,7 @@ iika9130
 A. 각 게시글에 대해 한 번 기록된 사용자는 중복 확인을 방지하기 위해 저장됩니다. 필요시 해당 파일을 열어 수동으로 사용자를 삭제하세요.
 
 ### Q2. 게시글 번호 외에 추가로 관리해야 할 사항이 있나요?
-A. 각 게시글 번호에 따라 고유 파일이 생성되므로 별도의 관리는 필요 없습니다. 단, 블랙리스트는 수동으로 추가 및 관리해야 합니다.
+A. 각 게시글 번호에 따라 고유 파일이 생성되므로 별도의 관리는 필요 없습니다. 단, 설정과 블랙리스트는 수동으로 관리해야 합니다.
 
 ---
 
