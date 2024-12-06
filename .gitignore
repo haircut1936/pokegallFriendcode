@@ -1,0 +1,13 @@
+# Exclude specific directories
+build/
+chrome-win64/
+chromedriver-win64/
+_internal/
+
+# Exclude specific files
+run.exe
+run.spec
+
+# Exclude all .txt files except 블랙리스트.txt
+*.txt
+!블랙리스트.txt
