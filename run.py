@@ -214,6 +214,14 @@ def guestbook_writing(user, pivot, code):
         driver.get(f"https://gallog.dcinside.com/{user}/guestbook")
         driver.implicitly_wait(3)
 
+        # 방명록 작성 허용 여부 확인
+        page_source = driver.page_source
+        soup = BeautifulSoup(page_source, "html.parser")
+        restricted_element = soup.find("div", {"class": "nomem_comment_info"})
+        if restricted_element:
+            print(f"\n'{user}'의 방명록은 허용된 사용자만 작성할 수 있습니다.")
+            return -1
+
         # 텍스트 영역 선택 및 입력
         textarea = driver.find_element(By.NAME, "memo")
         textarea.clear()
